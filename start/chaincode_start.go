@@ -73,7 +73,6 @@ func (t *SimpleChaincode) write(stub *shim.ChaincodeStub, args []string) ([]byte
     if(args[2]!="PS12094") {
         return nil, errors.New("Wrong validation code!")
     }
-
     key = args[0]                            
     value = args[1]
     err = stub.PutState(key, []byte(value))  
