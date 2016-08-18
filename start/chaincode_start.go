@@ -67,7 +67,7 @@ func (t *SimpleChaincode) write(stub *shim.ChaincodeStub, args []string) ([]byte
     fmt.Println("running write()")
 
     if len(args) != 3 {
-        return nil, errors.New("Incorrect number of arguments. Expecting 3. name of the key, value to set, and validation code")
+        return "ERROR", errors.New("Incorrect number of arguments. Expecting 3. name of the key, value to set, and validation code")
     }
     
     if(args[2]!="PS12094") {
